@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "CovaSim: Run Experiment",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "python/run.py",
+            "args": ["/workspaces/covasim-covid19/", "5000"],
+            "env": {"SLURM_ARRAY_TASK_ID": "1024"},
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
